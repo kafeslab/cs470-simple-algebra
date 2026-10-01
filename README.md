@@ -1,8 +1,21 @@
 # cs470-simple-algebra
 
-A minimal Python library for learning groups, rings, and fields through modular arithmetic.
+A minimal Python library for learning groups, rings, and fields through modular arithmetic. To assist Week 2 of CS470/519 at Bilkent University.
 
 Read [algebra.py](algebra.py) and [polynomials.py](polynomials.py). Python 3.9+, no dependencies.
+
+## Lecture versions
+
+The polynomial lecture builds on the algebra lecture.
+
+| Lecture | Content | Examples |
+|---|---|---|
+| [Algebra](<https://github.com/kafeslab/cs470-simple-algebra/releases/tag/week2-algebra>) | Groups, rings, and prime fields | ex1-ex5 |
+| [Polynomials](<https://github.com/kafeslab/cs470-simple-algebra/releases/tag/week2-polynomials>) | Adds binary polynomials, extension fields | ex1-ex6 |
+
+[See what changed between lectures](<https://github.com/kafeslab/cs470-simple-algebra/compare/week2-algebra...week2-polynomials>).
+
+The main branch contains the latest version.
 
 ```sh
 python3 ex1.py  # Additive groups
@@ -25,4 +38,4 @@ print(format_polynomial(field.multiplicative_group.inverse(0b101)))  # x
 ```
 
 Exercise: implement `integer_egcd` in `algebra.py` and `polynomial_egcd` in `polynomials.py`.
-Field division and multiplicative inverses use them automatically, falling back to search while they raise `NotImplementedError`.
+Field division and multiplicative inverses use them automatically, they do a linear search over all the elements to find the inverse if they raise `NotImplementedError`.
